@@ -1,0 +1,37 @@
+<div class="auth-container">
+  <div class="auth-card">
+    <h2>რეგისტრაცია</h2>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>ელ-ფოსტა</label>
+        <input type="email" formControlName="email" placeholder="შენი ელ.ფოსტა" />
+        <small
+          class="error-text"
+          *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid"
+        >
+          სწორი ელ-ფოსტა აუცილებელია.
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label>პაროლი</label>
+        <input type="password" formControlName="password" placeholder="მინიმუმ 6 სიმბოლო" />
+        <small
+          class="error-text"
+          *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid"
+        >
+          პაროლი უნდა იყოს მინიმუმ 6 სიმბოლოსგან შედგენილი.
+        </small>
+      </div>
+
+      <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+      <button type="submit" class="btn-submit" [disabled]="registerForm.invalid">
+        დარეგისტრირება
+      </button>
+    </form>
+
+    <p class="redirect-text">უკვე გაქვთ ანგარიში? <a routerLink="/login">შედით აქედან</a></p>
+  </div>
+</div>

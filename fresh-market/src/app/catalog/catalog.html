@@ -1,0 +1,20 @@
+<div class="catalog-container">
+  <h1 class="page-title">ხილი და ბოსტნეული</h1>
+
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let item of products">
+      <img [src]="item.image" [alt]="item.name" class="product-image" />
+
+      <div class="product-info">
+        <span class="category-badge">{{ item.category }}</span>
+        <h3>{{ item.name }}</h3>
+        <p class="price">{{ item.price | currency: 'GEL' : 'symbol' }}</p>
+      </div>
+
+      <div class="card-actions">
+        <a [routerLink]="['/catalog', item.id]" class="btn-details">დეტალები</a>
+        <button (click)="addToCart(item)" class="btn-add">კალათაში</button>
+      </div>
+    </div>
+  </div>
+</div>

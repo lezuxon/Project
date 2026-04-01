@@ -1,0 +1,10 @@
+<div class="notifications-container">
+  <div
+    *ngFor="let notification of notifications"
+    [ngClass]="['notification', `notification-${notification.type}`]"
+    class="notification-item"
+  >
+    <span class="notification-message">{{ notification.message }}</span>
+    <button class="notification-close" (click)="closeNotification(notification.id)">✕</button>
+  </div>
+</div>

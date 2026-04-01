@@ -1,0 +1,82 @@
+{
+  "users": [
+    {
+      "id": "f342",
+      "email": "leq.dd@gmail.com",
+      "password": "minimum"
+    },
+    {
+      "email": "leq.dd@gmail.com",
+      "password": "minimum",
+      "id": "QxbQ7nUyYEc"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "მწვანე ვაშლი",
+      "category": "ხილი",
+      "price": 3.5,
+      "description": "მჟავე მწვანე ვაშლი.",
+      "image": "https://chefsmandala.com/wp-content/uploads/2018/03/Apple-Green.jpg"
+    },
+    {
+      "id": "2",
+      "name": "ბანანი",
+      "category": "ხილი",
+      "price": 4,
+      "description": "ბანანი ეკვადორიდან.",
+      "image": "https://fruitfortheoffice.co.uk/media/.renditions/wysiwyg/42e9as7nataai4a6jcufwg.jpeg"
+    },
+    {
+      "id": "3",
+      "name": "ფორთოხალი",
+      "category": "ხილი",
+      "price": 5.2,
+      "description": "C ვიტამინით მდიდარი, ტკბილი ფორთოხალი.",
+      "image": "https://chemwatch.net/wp-content/uploads/2021/11/image-6.jpeg"
+    },
+    {
+      "id": "4",
+      "name": "პომიდორი",
+      "category": "ბოსტნეული",
+      "price": 4.5,
+      "description": "ახალი, წითელი ქართული პომიდორი.",
+      "image": "https://foodcare.in/cdn/shop/files/tomatoes-canva.webp?v=1768271474"
+    },
+    {
+      "id": "5",
+      "name": "კიტრი",
+      "category": "ბოსტნეული",
+      "price": 3,
+      "description": "ხრაშუნა სათბურის კიტრი.",
+      "image": "https://organicmandya.com/cdn/shop/files/Cucumber.jpg?v=1757079364&width=1024"
+    },
+    {
+      "id": "6",
+      "name": "სტაფილო",
+      "category": "ბოსტნეული",
+      "price": 2.5,
+      "description": "ტკბილი სტაფილო.",
+      "image": "https://noblewoodgardenstore.ie/wp-content/uploads/2022/02/Carrot.png"
+    },
+    {
+      "id": "7",
+      "name": "კარტოფილი",
+      "category": "ბოსტნეული",
+      "price": 2,
+      "description": "ახალი კარტოფილი.",
+      "image": "https://www.veggipedia.nl/_next/image?url=https%3A%2F%2Fveggipedia-cms.production.taks.zooma.cloud%2Fassets%2FUploads%2FProducts%2FAardappel-groenten-Veggipedia__FitMaxWzYwMCw2MDBd.png&w=3840&q=75"
+    },
+    {
+      "id": "8",
+      "name": "მსხალი",
+      "category": "ხილი",
+      "price": 6,
+      "description": "ტკბილი მსხალი.",
+      "image": "https://cdn.2nabiji.ge/products/mskhali-1kg-300x300.webp"
+    }
+  ],
+  "cart": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

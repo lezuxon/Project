@@ -1,0 +1,26 @@
+<div class="details-container" *ngIf="product">
+  <button class="btn-back" (click)="goBack()">&#8592; უკან დაბრუნება</button>
+
+  <div class="product-content">
+    <div class="image-section">
+      <img [src]="product.image" [alt]="product.name" />
+    </div>
+
+    <div class="info-section">
+      <span class="category">{{ product.category }}</span>
+      <h1>{{ product.name }}</h1>
+      <p class="price">{{ product.price | currency: 'GEL' : 'symbol' }}</p>
+
+      <div class="description">
+        <h3>პროდუქტის შესახებ:</h3>
+        <p>{{ product.description }}</p>
+      </div>
+
+      <button class="btn-add" (click)="addToCart(product)">კალათაში დამატება</button>
+    </div>
+  </div>
+</div>
+
+<div class="loading" *ngIf="!product">
+  <p>ინფორმაცია იტვირთება...</p>
+</div>

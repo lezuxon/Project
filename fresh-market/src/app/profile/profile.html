@@ -1,0 +1,37 @@
+<div class="profile-container" *ngIf="currentUser; else notLoggedIn">
+  <div class="profile-card">
+    <div class="profile-header">
+      <div class="avatar">👤</div>
+      <h2>{{ currentUser.email.split('@')[0] || 'მომხმარებელი' }}</h2>
+      <p class="user-email">{{ currentUser.email }}</p>
+    </div>
+
+    <div class="profile-details">
+      <div class="detail-item">
+        <span class="label">ID</span>
+        <span class="value">{{ currentUser.id }}</span>
+      </div>
+      <div class="detail-item">
+        <span class="label">სტატუსი</span>
+        <span class="value active">აქტიური</span>
+      </div>
+    </div>
+
+    <div class="profile-actions">
+      <button routerLink="/catalog" class="btn-shop">მაღაზიაში დაბრუნება</button>
+      <button class="btn-logout" (click)="logout()">გამოსვლა</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #notLoggedIn>
+  <div class="profile-container">
+    <div class="profile-card">
+      <div class="not-logged-in">
+        <p>ჯერ არ ხართ შესული</p>
+        <p class="subtitle">გაიარეთ ავტორიზაცია თქვენი ანგარიშის ხელმისაწვდომობისთვის</p>
+        <button routerLink="/login" class="btn-login">შესული</button>
+      </div>
+    </div>
+  </div>
+</ng-template>

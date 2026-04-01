@@ -1,0 +1,24 @@
+<header class="main-header">
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/catalog"><span>FreshMarket</span></a>
+    </div>
+
+    <nav class="nav-menu">
+      <a routerLink="/catalog" routerLinkActive="active">კატალოგი</a>
+      <a routerLink="/cart" routerLinkActive="active">კალათა</a>
+      <a routerLink="/profile" routerLinkActive="active" *ngIf="isLoggedIn">პროფილი</a>
+
+      <div class="auth-section" *ngIf="isLoggedIn; else guestButtons">
+        <button class="logout-btn" (click)="onLogout()">გამოსვლა</button>
+      </div>
+
+      <ng-template #guestButtons>
+        <div class="auth-section">
+          <a routerLink="/login" class="login-link">შესვლა</a>
+          <a routerLink="/register" class="register-btn">რეგისტრაცია</a>
+        </div>
+      </ng-template>
+    </nav>
+  </div>
+</header>
